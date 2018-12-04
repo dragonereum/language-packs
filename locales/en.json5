@@ -1,0 +1,868 @@
+{
+  "common": {
+    "appName": "Dragonereum",
+    "appDescription": "Dragonereum is a cryptocollectible game that combines the blockchain technology with complex player-vs-player gameplay. Fight, breed, train, and trade to win!",
+    "appDeveloper": "Nonsense Studio",
+    "name": "Name",
+    "you": "You",
+    "buy": "Buy",
+    "sell": "Sell",
+    "back": "Back",
+    "purchase": "Purchase",
+    "processing": "Processing",
+    "buyFor": "Buy for {{price}}",
+    "currencySwitcherTitle": "Set currency",
+    "hints": {
+      "dragonSkillfulnessIndex": "This is the dragon's genetic rating. The more powerful and rare a dragon's genes are, the higher its rating. The most skilled Dragon Masters get a reward for their contribution to Dragonereum's gene pool.",
+      "dnaPoints": "DNA Points can be spent to upgrade a dragon's skills or obtain offspring. Don't forget that the cost of reproduction also goes up as the dragon's level increases.",
+      "HP": "A dragon's health depends on its Stamina. If a dragon's health drops to zero during combat, it loses the battle.",
+      "mana": "A dragon's mana depends on its Intelligence and is depleted when the dragon uses magic or special moves during battle.",
+      "battleStrategy": "Defined by two tactics: attack vs. defense and melee vs. ranged attack. You can set the dragon's strategy. If the dragon has to defend itself, the pre-defined defense strategy will come into play.",
+      "talent": "Lets a dragon heal another dragon, replenish its mana, or enhance one of its skills until the next battle. A Talent can only be selected once, when the dragon reaches level 10.",
+      "specialAttack": "An enhanced attack that the dragon can use in combat instead of a normal attack. The higher a dragon's Intelligence, the more often it can use its special attack.",
+      "specialDefense": "An enhanced defense that the dragon can use in combat instead of a normal defense. The higher a dragon's Intelligence, the more often it can use its special defense.",
+      "enableFilters": "Being cypherpunks, Dragon Masters prefer to receive information in a decentralized way. But you can always get dragon population figures by connecting to the Dragonereum server.",
+      "useDragonereumNode": "Use our portal to Blockchain instead of INFURA. Don't  touch it if you don't know what it is.",
+      "battleCounter": "The time remaining before the start of the battle. Note that time in Dragonereum is measured in blocks rather than hours.",
+      "distributeRewards": "Once a day any Dragon Master can distribute the reward among the top-rated dragons. Needless to say, you always want one of your own dragons to be on the list."
+    },
+    "races": { // The different types of eggs that a player can buy under the Genesis Tab
+      "magic": {
+        "name": "Cyber", // One of the five egg types
+        "bonus": "intelligence", // The basic skill that this particular dragon type will boost
+        "special": {
+          "attack": "Cursed Particles",
+          "defence": "Ether Shield"
+        }
+      },
+      "fire": {
+        "name": "Fire", // One of the five egg types
+        "bonus": "attack", // The basic skill that this particular dragon type will boost
+        "special": {
+          "attack": "Meteorite Strike",
+          "defence": "Firewall"
+        }
+      },
+      "water": {
+        "name": "Water", // One of the five egg types
+        "bonus": "stamina", // The basic skill that this particular dragon type will boost
+        "special": {
+          "attack": "Blizzard",
+          "defence": "Ice Armor"
+        }
+      },
+      "earth": {
+        "name": "Earth", // One of the five egg types
+        "bonus": "defense", // The basic skill that this particular dragon type will boost
+        "special": {
+          "attack": "Stone Blast",
+          "defence": "Crystal Shell"
+        }
+      },
+      "air": {
+        "name": "Air", // One of the five egg types
+        "bonus": "speed", // The basic skill that this particular dragon type will boost
+        "special": {
+          "attack": "Thunderbolt",
+          "defence": "Storm Barrier"
+        }
+      },
+    },
+    "yourDragon": "Your Dragon",
+    "eggs": "Eggs",
+    "dragons": "Dragons",
+    "level": "level",
+    "lvl": "{{level}} lvl", // This information is by the bar on the dragon’s right, and it shows the level number that the dragon is reaching for, with the bar filling up when XP are accumulated
+    "genesis": "Genesis",
+    "gen": "Gen {{gen}}",
+    "gold": "GOLD",
+    "ether": "ETH",
+    "services": "Services",
+    "days": "{{days}} day(s)",
+    "address": "Address",
+    "owner": "Owner", // Shows the owner’s name or wallet address
+    "race": "Type", // Shows a bar showing the type of dragon under the dragon’s profile, if the dragon is made up of different types the bar is different colors
+    "cancelAuction": "Cancel auction",
+    "myAsk": "My Ask",
+    "myBid": "My Bid",
+    "newContentIsAvailable": "New content is available. Click here to refresh.",
+    "contentIsCached": "Content is cached for offline use.",
+    "limitedConnection": "We couldn't recognize your wallet. Please unlock it or click here to download the MetaMask extension.",
+    "renderingError": "Rendering error. Default images were used.",
+    "metaMaskIsOutdated": "It seems like your MetaMask version does not support adding the tokens. Please update your MetaMask to the latest version.",
+    "saveChanges": "Save changes",
+    "save": "Save",
+    "transactionInProgress": "Processing transaction with {{tx}} hash. Click here to view the transaction on Etherscan.", // when acquiring an egg for example or hatching the egg, or any other process that requires time a pop-up appears until the transaction is complete
+    "transactionInProgressCyb": "Processing transaction with {{tx}} hash. Click here to view the transaction.",
+    "transactionIsMined": "Transaction with {{tx}} hash mined. Click here to view the transaction on Etherscan.",
+    "transactionIsRejected": "Transaction with {{tx}} hash failed. Click here to view the transaction on Etherscan.",
+    "goToMarketplace": "Go to marketplace",
+    "notifications": "Notifications", // Tab on right side appears, after pressing the bell button on the top right, it shows all the different notifications a player has received, such as errors when buying eggs
+    "notificationsEmptyMessageHeader": "You do not have any notifications yet or have reloaded your browser tab recently.",
+    "notificationsEmptyMessageBody": "We do not have server-side notifications at this time, so if you close your browser tab or reload the page, all data will be lost.",
+    "notificationsEmptyMessageFooter": "Server-side notifications are coming soon.",
+    "dragonAttacked": "You dragon #{{id}} has been attacked by the dragon #{{opponent}}. Click here to get the lowdown.",
+    "notificationsHistory": {
+      "eggIsClaimed": "You claimed the egg #{{id}}.",
+      "eggIsIncubating": "Your egg #{{id}} has been sent to the nest.",
+      "eggHasHatched": "Your egg #{{id}} has hatched! Click here to see your dragon.",
+      "eggIsCreated": "You bred the dragons and created the egg #{{id}}.",
+      "dragonIsSentToMarketplace": "You sent your dragon #{{id}} to the marketplace.",
+      "dragonIsSentToBreedingMarketplace": "You sent your dragon #{{id}} to the breeding marketplace.",
+      "dragonIsRemovedFromMarketplace": "Your dragon #{{id}} has been removed from the marketplace.",
+      "dragonIsRemovedFromBreedingMarketplace": "Your dragon #{{id}} has been removed from the breeding marketplace.",
+      "dragonBought": "You bought the dragon #{{id}}.",
+      "dragonSold": "You sold the dragon #{{id}}.",
+      "dragonBoughtBreeding": "Your dragon #{{id}} was bred with another dragon.",
+      "dragonSoldBreeding": "Your dragon #{{id}} has been a stud for another dragon.",
+      "eggIsSentToMarketplace": "You sent your egg #{{id}} to the marketplace.",
+      "eggIsRemovedFromMarketplace": "Your egg #{{id}} has been removed from the marketplace.",
+      "eggBought": "You bought the egg #{{id}}.",
+      "eggSold": "You sold the egg #{{id}}.",
+      "goldIsSentToMarketplace": "You sent {{amount}} GOLD to the market for {{price}} ether per coin.",
+      "goldIsRemovedFromMarketplace": "You removed your GOLD from the marketplace.",
+      "goldBought": "You bought {{amount}} GOLD.",
+      "goldSold": "You sold {{amount}} GOLD.",
+      "skillIsSentToMarketplace": "You sent your dragon's #{{id}} skill to the marketplace.",
+      "skillIsRemovedFromMarketplace": "Your dragon's #{{id}} skill has been removed from the marketplace.",
+      "storybookUnlocked": "{{title}} by {{author}}",
+      "skillsBought": "The dragon #{{id}} used a special skill on your dragon #{{target}}.",
+      "skillsSold": "Your dragon #{{id}} used a special skill on the dragon #{{target}}.",
+      "battleAttack": "Your dragon #{{id}} attacked the dragon #{{opponent}}. Click here to get the lowdown.",
+      "battleDefense": "Your dragon #{{id}} was attacked by the dragon #{{opponent}}. Click here to get the lowdown.",
+      "battleGladiatorAttack": "The gladiator battle initiated by you is over. Click here now to get the lowdown.",
+      "battleGladiatorDefense": "The gladiator battle you applied to participate in is over. Click here now to get the lowdown."
+    },
+    "priceStart": "From",
+    "priceEnd": "To",
+    "changingTime": "Price will fluctuate for (hours)",
+    "forSale": "For sale",
+    "forBreeding": "For breeding",
+    "showAllTypes": "Show all types",
+    "sortBy": "Sort by",
+    "filterDragons": "Filter dragons",
+    "filterEggs": "Filter eggs",
+    "fullBalance": "Full balance",
+    "goldReceived": "You received {{value}} GOLD!",
+    "goldSold": "{{user}} bought {{value}} GOLD from you",
+    "offerDescription": "If your full balance will be less than your offer, the lot amount {{value}} to the amount of available money.",
+    "yourProfile": "Your profile",
+    "achievements": "Achievements",
+    "willDecrease": "will decrease",
+    "metaMaskIsLocked": "Your MetaMask is locked.", // Message appears to prompt users to unlock their MetaMask, if the MetaMask is locked
+    "transfer": "Transfer",
+    "egg": {
+      "sellEgg": "Sell ​​egg",
+      "sellEggHelper": "Set your egg's selling price",
+      "transferEgg": "Transfer egg",
+      "transferEggHelper": "Transfer your egg to the following address",
+      "cancelEggAuctionSuccess": "Your egg has been removed from the marketplace.",
+      "cancelEggAuctionError": "Error removing your egg from the marketplace. Click here to try again.",
+      "incubateFor": "Incubate for {{price}}", // Once an egg is acquired and a player is on the screen with the unhatched egg, button showing the price of incubation in GOLD coins.
+      "eggPrice": "Egg price",
+      "raceEggName": "{{name}} dragon egg",
+      "raceBonusTitle": "Dragon type bonus: {{bonus}}",
+      "raceBonusTo": "{{value}} to {{type}}",
+      "isInIncubator": "The egg is incubating, and its position in the nest is {{position}} out of {{capacity}}.",
+      "isIncubated": "Congratulations, your egg has hatched! Click here to see your new dragon."
+    },
+    "dragon": {
+      "sellDragon": "Sell ​​dragon", // An owner can put their dragon on the marketplace by clicking the button under the bar showing XP
+      "sellDragonHelper": "Set your dragon's selling price", // Message on pop-up, which appears after clicking ‘Sell dragon’ button under the my dragons tab, once a player selects one of their dragons
+      "transferDragon": "Transfer dragon",
+      "transferDragonHelper": "Transfer your dragon to the following address",
+      "breedDragonHelper": "Set your dragon's breeding price",
+      "sellForBreeding": "Put up for stud",
+      "sellDragonForBreeding": "Put this dragon up for stud", // The dragon remains in possession of a user. This is just a permission to use the dragon as a breeding partner for one time
+      "breedWithOwnDragon": "Breed with my dragon",
+      "breedDragon": "Breed this dragon",
+      "breed": "Breed {{price}}",
+      "breedFor": "Breed for {{price}}",
+      "dragonName": "Dragon name",
+      "dragonPrice": "Dragon price",
+      "breedingPrice": "Breeding price",
+      "cancelBreedingAuction": "Cancel auction",
+      "cancelDragonAuctionSuccess": "Your dragon has been removed from the marketplace.",
+      "cancelDragonAuctionError": "Error removing your dragon from the marketplace. Click here to try again.",
+      "skillsSetting": "Set skills",
+      "health": "Health",
+      "mana": "Mana",
+      "experience": "XP",
+      "attack": "Attack", // Attack is one end of the action slider, the 1st bar under Battle Strategy, which shows once a player selects one of their dragons
+      "defence": "Defense", // Defense is the other end of the action slider, the 1st bar under Battle Strategy, which shows once a player selects one of their dragons
+      "melee": "Melee", // Or short-distance attack is one end of the attack slider, the 2nd bar under Battle Strategy, which shows once a player selects one of their dragons
+      "ranged": "Ranged", // Or long-distance attack is the other one end of the attack slider, the 2nd bar under Battle Strategy, which shows once a player selects one of their dragons
+      "characteristics": "Characteristics",
+      "strategy": "Strategy",
+      "battleStrategy": "Battle strategy",  // The player can set their default battle strategy, which will be used in case an opponent picks this dragon to battle with
+      "dragonAbilities": "Dragon Abilities",
+      "setName": "Set name",
+      "setNameFor": "Set name for {{price}}",
+      "setNameTitle": "Give your dragon a name!",
+      "setNameHelper": "Make it unique! But remember, you can do it {{period}}",
+      "onlyOnce": "only once!",
+      "setNamePriceDescription": "The price depends on the length of the dragon's name.", // The amount of GOLD that it will cost to set the dragon’s name
+      "setNameLetters": "{{letters}} letters",
+      "setNameLettersFixed": "{{letters}} and more letters",
+      "ability": {
+        "types": {
+          "attack": {
+            "title": "Offensive ability",
+            "value": "{{value}} damage",
+            "description": "A special attack that damages dragons with a multiply effect. The effect does not stack and deals {{value}}."
+          },
+          "defence": {
+            "title": "Defensive ability",
+            "value": "{{value}} defense",
+            "description": "A special ability that grants your dragon an extra {{value}}."
+          },
+          "support": {
+            "title": "Support ability"
+          }
+        },
+        "cost": "Cost: {{cost}}",
+        "useSkill": "Use skill",
+        "selectAbility": "Select ability",
+        "selectAbilityText": "Choose a support ability for your dragon",
+        "supportAvailable": "Support ability available!",
+        "canChooseSupportAbility": "You can choose a support ability.",
+        "chooseOnce": "Keep in mind that you can only select a support ability once. Choose wisely!",
+        "supportNotAvailable": "The support ability will become available at level 10.",
+        "apply": "Apply ability",
+        "buffDescription": {
+          "base": "Multiplies the {{target}} of the selected dragon for one battle.",
+          "baseWithValue": "Multiplies the {{target}} of the selected dragon by {{value}} for one battle.",
+          "regeneration": "Recharges the {{target}} of the selected dragon.",
+          "regenerationWithValue": "Restores {{value}} {{target}} to the selected dragon."
+        },
+        "useOnDragon": "Use on dragon",
+        "sellOnMarket": "Sell ​​at marketplace",
+        "useSupportSkill": "Use support skill",
+        "chooseTheWayToUse": "Choose how to use the support skill",
+        "applySkillFor": "Apply skill for",
+        "setSupportSkillPrice": "Set your support skill selling price",
+        "sellSkill": "Sell ​​skill",
+        "searchAnyDragon": "Search for any dragon by ID",
+        "supportAbilities": {
+          "none": "None",
+          "attack": "Aura of Strength",
+          "defence": "Aura of Agility",
+          "stamina": "Aura of Stamina",
+          "speed": "Aura of Speed",
+          "intellect": "Aura of Wisdom",
+          "health": "Healing",
+          "mana": "Inspiration"
+        },
+        "updatePrice": "Update price",
+        "removeFromSale": "Cancel sale",
+        "purchaseSupportSkill": "Purchase support skill",
+        "chooseDragon": "Choose a dragon to apply the support ability to",
+        "selectDragon": "Select dragon"
+      },
+      "battles": {
+        "battleHistory": "Battle history",
+        "totalBattles": "Total battles",
+        "battlesWon": "Battles won",
+        "battlesLost": "Battles lost",
+        "startNewBattle": "Start new battle"
+      },
+      "types": {
+        "sewage": "Sewage",
+        "aqueous": "Aqueous",
+        "ice": "Ice",
+        "swamp": "Swamp",
+        "slime": "Slime",
+        "oil": "Oil",
+        "poison": "Poison",
+        "abyss": "Abyss",
+        "tritium": "Tritium",
+        "quicksilver": "Quicksilver",
+        "ashen": "Ashen",
+        "charred": "Charred",
+        "flaming": "Flaming",
+        "molten": "Molten",
+        "sparkling": "Sparkling",
+        "solar": "Solar",
+        "firework": "Firework",
+        "laser": "Laser",
+        "plasma": "Plasma",
+        "volcanic": "Volcanic",
+        "miasma": "Miasma",
+        "wind": "Wind",
+        "smoke": "Smoke",
+        "nebulous": "Nebulous",
+        "whirlwind": "Whirlwind",
+        "bubble": "Bubble",
+        "jet": "Jet",
+        "dust": "Dust",
+        "cyclone": "Cyclone",
+        "cosmic": "Cosmic",
+        "mud": "Mud",
+        "stone": "Stone",
+        "copper": "Copper",
+        "malachite": "Malachite",
+        "sand": "Sand",
+        "steel": "Steel",
+        "marble": "Marble",
+        "platinum": "Platinum",
+        "obsidian": "Obsidian",
+        "uranium": "Uranium",
+        "cursed": "Cursed",
+        "hypnotic": "Hypnotic",
+        "alchemical": "Alchemical",
+        "twilight": "Twilight",
+        "arcane": "Arcane",
+        "voodoo": "Voodoo",
+        "necromantic": "Necromantic",
+        "enchanted": "Enchanted",
+        "divine": "Divine",
+        "demonic": "Demonic"
+      },
+      "bodyParts": {
+        "head": "{{type}} head",
+        "eyes": "{{type}} eyes",
+        "horns": "{{type}} horns",
+        "body": "{{type}} body",
+        "wings": "{{type}} wings",
+        "arms": "{{type}} arms",
+        "legs": "{{type}} legs",
+        "tail": "{{type}} tail",
+        "spike": "{{type}} spike",
+        "pattern": "{{type}} pattern"
+      },
+      "options": {
+        "options": "Options",
+        "upgradePoints": "DNA Points available", // Shows amount of DNA points available for upgrading or breeding
+        "breeding": "Breeding allowed",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "skillsStatistics": "Statistics", // Information under the dragon about the amount of its five basic skills
+      "skills": {
+        "attack": "Attack",
+        "defence": "Defense",
+        "stamina": "Stamina",
+        "speed": "Speed",
+        "intellect": "Intelligence"
+      },
+      "rarity": {
+        "rare": "Rare",
+        "legendary": "Epic",
+        "inbreeding": "Inbreeding"
+      }
+    },
+    "relatives": {
+      "parents": "Parents",
+      "children": "Children"
+    },
+    "price": {
+      "priceChanging": "Price changing",
+      "hours": "{{hours}} hour(s)",
+      "left": "left",
+      "startPrice": "Starting price",
+      "endPrice": "Final price"
+    },
+    "errors": {
+      "retrievingDataError": {
+        "title": "Error retrieving information from the blockchain", // Message shows up if information on player’s account cannot be accessed
+        "button": "Try again"
+      }
+    }
+  },
+  "genesis": {
+    "howAuctionWorks": "How the auction works",
+    "howAuctionWorksText": "If more than one person wants to take the same egg from Genesis, the player who offers the highest gas price will receive the egg. You can join the struggle for a new egg in the next block.",
+    "blockNumber": "Block #{{block}}",
+    "blocksLeft": "{{blocks}} block(s) left",
+    "title": "Genesis", // This tab is where players can buy genesis eggs
+    "heading": "Welcome to the Genesis market",
+    "description": "There are five inter-breedable types of dragons, each with dominant and recessive genes, genome mutations, and gene penalties for inbreeding. Want to hatch a dragon of your own? Take a chance and claim your egg now!",
+    "restAmount": "{{amount}} egg(s) left", // Shows the amount of Genesis eggs of each type that are left to sell
+    "lastClaimed": "Last claimed:",
+    "claim": "Claim",
+    "expectedNext": "Next expected:",
+    "expectedPrice": "Expected price: {{price}}",
+    "gasPrice": "Gas price (Gwei)",
+    "gasPriceValue": "Gas price (Gwei): {{value}}",
+    "eggNumber": "Egg number",
+    "eggNumberValue": "Egg number: {{value}}",
+    "distributionInfo": "Egg distribution info",
+    "medianPrice": "Median price:",
+    "maxPrice": "Max. price:",
+    "priceChanging": "Price changing:",
+    "gwei": "{{value}} Gwei",
+    "rising": "{{arrow}} Rising",
+    "falling": "{{arrow}} Falling",
+    "overbid": "Overbid"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "breeding": "DNA",
+    "spread": "Spread",
+    "chart": "Chart",
+    "depthChart": "Depth chart",
+    "midPrice": "Mid-Market Price",
+    "buyEggSuccess": "Your purchase was successful. Click here to see your new egg.",
+    "buyEggError": "Error buying egg. Click here to try again.",
+    "claimEggSuccess": "Your claim was successful. Click here to see your new egg.", // Message appears when the transaction of acquiring an egg is complete under the Genesis tab
+    "claimEggError": "Error claiming egg. Try increasing your gas price and claiming an egg again.", // Error message that shows if there is some unforeseen circumstances occurred while claiming an egg - under Genesis tab
+    "buyDragonSuccess": "Your purchase was successful. Click here to see your new dragon.",
+    "buyDragonError": "Error buying dragon. Click here to try again.",
+    "breedDragonSuccess": "You successfully bred the dragons. Click here to see the egg you created.",
+    "breedDragonError": "Error breeding dragons. Click here to try again.",
+    "noOneTrading": "Oops! No one is trading here now", // Under Marketplace tab, the GOLD tab, message shows if no one is buying/selling GOLD
+    "becomeFirstTrader": "Come back later for new deals or become the first trader on the market.",
+    "noOneBuying": "Oops! No one is buying GOLD now", // Under Marketplace tab, the GOLD tab, message shows if no one is buying GOLD,
+    "becomeFirstBuyer": "Come back later for new deals or become the first buyer on the market.",
+    "noOneSelling": "Oops! No one is selling GOLD now", // Under Marketplace tab, the GOLD tab, message shows if no one is selling GOLD,
+    "becomeFirstSeller": "Come back later for new deals or become the first seller on the market.",
+    "startTradingGold": "Start trading GOLD", // A player can choose to sell their own GOLD, under the Marketplace tab and then under the GOLD tab
+    "noDragonsOnSale": "Oops! There are no dragons for sale.", // In the Marketplace tab message shows if no one is selling dragons
+    "sellFirstDragon": "Be the first! Just go to your dragon's page and click on the \"Sell\" button.",
+    "noEggsOnSale": "Oops! There are no eggs for sale.",
+    "sellFirstEgg": "Be the first! just go to your egg's page and click on the \"Sell\" button.",
+    "noDragonsForBreeding": "Oops! There are no dragons for breeding.",
+    "breedFirstDragon": "Be the first! Just go to your dragon's page and click on the \"Breed\" button.",
+    "noOwnDragonsForBreeding": "Fight battles to earn experience points (XP) and get a \"level up\" for another dragon.",
+    "noDragonsAtLeaderboard": "Oops! There are no dragons on the leaderboard.",
+    "noOneDragonsHatched": "Oops! No dragons seem to have hatched.",
+    "noGoldForSale": "Oops! No one is selling GOLD at the moment.", // Under Marketplace tab, the GOLD tab, message shows if no one is selling GOLD
+    "createNewOffer": "Create new offer",
+    "available": "Available",
+    "ask": "Ask",
+    "bid": "Bid",
+    "askPerCoin": "ASK (ETH per coin)",
+    "bidPerCoin": "BID (ETH per coin)",
+    "totalPriceETH": "Total price ETH",
+    "sellGold": "Sell GOLD",
+    "buyGold": "Buy GOLD",
+    "selectCountToSell": "Select the count of coins to sell on marketplace",
+    "selectCountToBuy": "Select the count of coins to buy on marketplace",
+    "buyGoldSuccess": "Your purchase was successful.",
+    "buyGoldError": "Error purchasing GOLD. Click here to try again.",
+    "sellGoldSuccess": "You have successfully sent your GOLD to the marketplace.",
+    "sellGoldError": "Error sending your GOLD to the marketplace. Click here to try again.",
+    "creatingGoldBuyOrderSuccess": "You successfully create bid order on the marketplace.",
+    "creatingGoldBuyOrderError": "Error creating bid order on the marketplace. Click here to try again.",
+    "creatingGoldSellOrderSuccess": "You successfully create ask order on the marketplace.",
+    "creatingGoldSellOrderError": "Error creating ask order on the marketplace. Click here to try again.",
+    "removeGoldBuyOrderSuccess": "You successfully removed bid order from the marketplace.",
+    "removeGoldBuyOrderError": "Error removing bid order from the marketplace. Click here to try again.",
+    "removeGoldSellOrderSuccess": "You successfully removed ask order from the marketplace.",
+    "removeGoldSellOrderError": "Error removing ask order from the marketplace. Click here to try again.",
+    "seller": "Seller",
+    "setPricePerCoin": "Set the price per coin", // Message on pop-up appears after user presses start selling GOLD button - user to set the ETH price of one GOLD coin
+    "buySkillSuccess": "You successfully purchased a service.",
+    "buySkillError": "Error purchasing service. Click here to try again.",
+    "noSkillsForSale": "Oops! There are no services for sale.",
+    "sellerLowMana": "Seller has low mana",
+    "timeLeft": "{{minutes}}m {{seconds}}s left"
+  },
+  "myDragons": {
+    "title": "My dragons",
+    "modalTitle": "Select a dragon to breed",
+    "sellDragonSuccess": "You successfully sent your dragon to the marketplace.",
+    "sellDragonError": "Error sending your dragon to the marketplace. Click here to try again.", // If a user cancels putting their dragon on the marketplace, this pop-up appears
+    "cancelDragonBreedingAuctionSuccess": "Your dragon has been removed from the breeding marketplace.",
+    "cancelDragonBreedingAuctionError": "Error removing your dragon from the breeding marketplace. Click here to try again.",
+    "breedDragonsSuccess": "You successfully bred the dragons. Click here to see your new egg.",
+    "breedDragonsError": "Error breeding your dragons. Click here to try again.",
+    "sellDragonForBreedingSuccess": "You have successfully sent your dragon to the breeding marketplace.",
+    "sellDragonForBreedingError": "Error sending your dragon to the breeding marketplace. Click here to try again.",
+    "incubateEggSuccess": "Success! Your egg has been sent to the nest.", // Message appears on pop-up once a user has submitted GOLD payment for incubating and hatching their egg
+    "incubateEggError": "Error incubating your egg. Click here to try again.",
+    "sellEggSuccess": "You successfully sent your egg to the marketplace.",
+    "sellEggError": "Error sending your egg to the marketplace. Click here to try again.",
+    "eggInTheNest": "The egg is in the nest.",
+    "dragonExists": "A dragon with that name already exists.",
+    "stillHaveNoDragons": "Oops! You have no dragons yet.",
+    "buyFirstDragon": "You can buy your first dragon at our marketplace.",
+    "stillHaveNoEggs": "Oops! You have no eggs yet.",
+    "buyFirstEgg": "You can buy your first egg at our marketplace.",
+    "setDragonNameSuccess": "Your dragon has a name now.",
+    "setDragonNameError": "Error naming dragon",
+    "setDragonPeacefulSkillSuccess": "Your dragon got a support ability.",
+    "setDragonPeacefulSkillError": "Error setting support ability",
+    "useDragonPeacefulSkillSuccess": "Your dragon successfully used its support ability.",
+    "useDragonPeacefulSkillError": "Error using support ability",
+    "sellDragonPeacefulSkillSuccess": "The support ability has been put up for sale.",
+    "sellDragonPeacefulSkillError": "Error selling support ability",
+    "removeFromSaleDragonPeacefulSkillSuccess": "Support ability is no longer for sale",
+    "removeFromSaleDragonPeacefulSkillError": "Error cancelling sale of support ability",
+    "transferEggSuccess": "You successfully transferred your egg",
+    "transferEggError": "Error transferring egg",
+    "transferDragonSuccess": "You successfully transferred your dragon",
+    "transferDragonError": "Error transferring the dragon"
+  },
+  "wrongNetwork": {
+    "title": "Oops! You're on the wrong network.",
+    "hint": "Just open MetaMask and switch to one of the following networks:"
+  },
+  "arena": {
+    "title": "Arena",
+    "regularBattle": "Regular battle", // Under the arena tab, new regular battle tab, where the player can choose one of their dragons to participate in a regular battle
+    "gladiatorBattle": "Gladiator battle", // Under the arena tab, new gladiator battle tab, where the player can choose one of their dragons to participate in a gladiator battle, where betting is available
+    "battlesHistory": "Battle record", // Under the arena tab, the battle history tab shows the number of past battles a player has engaged in as well as the amount won and the amount lost with detailed log of each battle
+    "startBattle": "Start the battle!", // Once a player has picked the opponent for a battle the screen changes and the button below the two dragons that will battle allows the battle to commence
+    "battleError": "Battle error. Click here to try again.",
+    "battleEnd": "The battle has been conducted. Click here to get the lowdown.",
+    "selectYourDragon": "Select a dragon to use in battle", // Under arena tab player can choose which one of their dragons they wish to engage in battle
+    "selectYourDragonDetails": "Choose a dragon from the list below to pit it against your opponent",
+    "selectOpponentDragon": "Select your opponent", // Once the player chooses one of their dragons a list of opponents appears from where the player can choose a dragon to battle with
+    "selectOpponentDragonDetails": "Select your dragon's opponent from the list below to start a battle.",
+    "startBattleTitle": "Let battle commence!",
+    "startBattleDetails": "Or choose your dragon and your opponent again",
+    "editStrategyTitle": "Edit your battle strategy",
+    "editStrategyDetails": "Change your dragon’s battle strategy to increase its chances of victory",
+    "battleResult": "You {{result}}",
+    "won": "Won",
+    "lost": "Lost",
+    "betWon": "Your bet won!",
+    "betLost": "Your bet lost!",
+    "totalBattles": "Total battles fought",
+    "battlesWon": "Battles won",
+    "battlesLost": "Battles lost",
+    "noOpponents": "Unfortunately, there are no opponents",
+    "comeBackLater": "Choose another dragon or come back later to seek out a fresh opponent.",
+    "battleLog": "View the Battle Log to see the details",
+    "battleDetailsLabel": "Scroll down for details about the battle",
+    "battleLogTitle": "Battle Log",
+    "challengeAccepted": "Challenge accepted",
+    "acceptedOpponentsInfo": "{{opponents}} opponents have accepted your challenge. They are waiting for your decision.",
+    "selectOpponent": "Select an opponent",
+    "autoSelectAfter": "Auto-select after {{blocks}} ({{hours}})",
+    "extend": "Extend",
+    "betForTheBattle": "Bet on the battle",
+    "battleCounter": "Battle counter",
+    "cancelBattle": "Cancel battle",
+    "battleCounteTip": "You can start the battle counter after selecting an opponent. Once the battle begins, you will not be able to stop it and end the battle. Be careful.",
+    "dragonIsOnSale": "Dragon is for sale",
+    "dragonIsOnBreed": "Dragon is on breed",
+    "dragonInTheBattle": "Dragon is in a battle",
+    "dragonIsTooStrong": "Dragon is too strong",
+    "gladiators": {
+      "creatingSuccess": "Gladiator battle created successfully",
+      "creatingError": "Error creating new gladiator battle. Click here to try again",
+      "applyOwnDragonForBattleSuccess": "Your dragon successfully applied for a gladiator battle",
+      "applyOwnDragonForBattleError": "Error applying dragon for gladiator battle. Click here to try again",
+      "applyOpponentDragonForBattleSuccess": "You successfully chose an opponent for the gladiator battle",
+      "applyOpponentDragonForBattleError": "Error choosing an opponent for the gladiator battle. Click here to try again",
+      "startBettingBattleSuccess": "You successful started the gladiator battle",
+      "startBettingBarrleError": "Error starting the gladiator battle. Click here to try again",
+      "cancelBettingBattleSuccess": "You successfully canceled the gladiator battle",
+      "cancelBettingBattleError": "Error canceling the gladiator battle. Click here to try again",
+      "opponentAutoSelectSucces": "You successfully canceled the gladiator battle.",
+      "opponentAutoSelectError": "Error auto-selecting an opponent for the battle. Click here to try again",
+      "extendAutoSelectTimeSuccess": "You successfully extended the auto-select time",
+      "extendAutoSelectTimeError": "Error extending auto-select time. Click here to try again",
+      "returnMyBetSuccess": "You successfully returned your bet",
+      "returnMyBetError": "Error returning your bet. Click here to try again",
+      "updateBattleBlockNumberSuccess": "You successfully updated the block number",
+      "updateBattleBlockNumberError": "Error updating block number. Click here to try again",
+      "battleOpeningError": "It looks like the battle you are trying to open no longer exists",
+      "battleBet": "Battle bet",
+      "usersBet": "Users' bet",
+      "yourBet": "Your bet",
+      "blocks": "blocks",
+      "createNewBattle": "Create new battle",
+      "waitingForOpponent": "Waiting for opponent",
+      "waitingOpponentTip": "You have no responses yet. Wait for a response to select an opponent",
+      "youCanSelectDragonAndApply": "You can select any of your dragons and apply for a battle",
+      "selectAnDragon": "Select a dragon",
+      "myAppliedDragon": "My applied dragon",
+      "myDeclinedDragon": "My declined dragon",
+      "theDragonIsWaitingConfrimation": "The dragon is waiting for confirmation from the opponent. You can call off your dragon and return your bet.",
+      "anotherDragonIsChosen": "Another dragon has been chosen for the battle. You can call off your dragon and return your bet.",
+      "contendersForBattle": "Contenders for the battle",
+      "returnMyBet": "Return my bet",
+      "waitingForConfirmation": "The dragon you selected is waiting for an opponent",
+      "learnAboutTheDragons": "Learn about the dragons that are applying to participate in the battle",
+      "battleToteResult": "Final battle results",
+      "yourDragon": "Your Dragon",
+      "extendToStartBattle": "The time to start the battle is over.",
+      "youHaveBlocksToStartBattle": "You have {{blocks}} block(s) ({{time}}) to start the battle.",
+      "winner": "Winner",
+      "won": "Won!",
+      "lost": "Lost",
+      "vs": "vs",
+      "finished": "Finished",
+      "cancelled": "Canceled",
+      "youReceived": "You received",
+      "youLost": "You lost",
+      "noBattles": "There are no battles",
+      "noBattlesDetails": "Be the first! Find an opponent for your dragon",
+      "selectDragon": "Select a dragon",
+      "goToNextStep": "Next step",
+      "battleCancelled": "Battle canceled",
+      "battleCancelledByOwner": "Battle canceled by owner",
+      "autoSelectButton": "Auto-select opponent",
+      "betsAmount": "{{amount}} bet(s)",
+      "applyOwnDragonForBattleModal": {
+        "firstStepTitle": "Step 1: Select your dragon",
+        "firstStepSubtitle": "Select your dragon for this battle. You can change your choice until you press the \"Apply for a battle\" button.",
+        "secondStepTitle": "Step 2: Edit your battle strategy",
+        "secondStepSubtitle": "After choosing a dragon you should change your dragon's battle strategy to increase its chances of victory.",
+        "applyForBattle": "Apply for a battle"
+      },
+      "applyOpponentDragonForBattleModal": {
+        "title": "Select an opponent",
+        "subtitle": "Before starting a battle you must select a dragon to fight.",
+        "confirm": "Confirm"
+      },
+      "createBattleModal": {
+        "firstStepTitle": "Step 1: Select your dragon",
+        "firstStepSubtitle": "To create a new battle, the first thing you need to do is choose one of your dragons to fight.",
+        "secondStepTitle": "Step 2: Edit your battle strategy",
+        "secondStepSubtitle": "After choosing a dragon you should change your dragon's battle strategy to increase its chances of victory.",
+        "thirdStepTitle": "Step 3: Place your bet",
+        "thirdStepSubtitle": "During this step you must choose your bet for the battle and start the battle counter. A counter is a device that tracks the number of times a particular event or process has occurred.",
+        "setBattleCurrency": "Set the battle currency",
+        "setBetAmount": "Set the amount of your bet",
+        "selectBattleCounter": "Set the battle start counter (in blocks)",
+        "approximate": "Approximate wait: {{time}}",
+        "createBattle": "Create battle"
+      },
+      "opponentsPreview": {
+        "filterBattles": "Filter battles"
+      },
+      "preStartInfo": {
+        "theBattleStartsIn": "The battle will start in",
+        "blocks": "{{blocks}} block(s)",
+        "battleTote": "Battle tote",
+        "battleToteInfo": "Try to predict the outcome of the battle and place a bet to hit the jackpot before the battle begins! Your winnings will be {{amount}} of users' bets on your opponent. In addition to the total pot, {{percent}} of all bets made on the defeated dragon go to the winner."
+      },
+      "battleResult": {
+        "tenPercentWentToWinner": "{{percentage}} ( {{bet}} ) of the total bet on the loser went to winner.",
+        "yourDragonLost": "Your dragon {{dragon}} fought a battle for {{bet}} and lost.",
+        "yourDragonWon": "Your dragon {{dragon}} fought a battle for {{bet}} and won.",
+        "youBetMovedToBank": "Your bet has been moved to the winning pot.",
+        "youWinIs": "You won {{win}}",
+        "backToBattleList": "Back to battle list",
+        "dragonOwnerWon": "The dragon {{dragon}} earned {{win}} for its owner."
+      }
+    },
+    "log": {
+      "startFirst": "{{target}} started first due to its higher speed.",
+      "specialAttack": "{{target}} used the special attack {{value}}.",
+      "specialDefence": "{{target}} used the special defense {{value}}.",
+      "moveForward": "{{target}} moved forward {{value}} meters.",
+      "moveBack": "{{target}} retreated {{value}} meters.",
+      "attackMelee": "{{target}} attacked, dealing {{value}} melee damage.",
+      "attackRanged": "{{target}} attacked, dealing {{value}} ranged damage.",
+      "defence": "{{target}} defended.",
+      "attackReflection": "{{target}} attacked, but {{enemy}} deflected {{value}} damage.",
+      "battleWon": "{{target}} won the battle.",
+      "block": "{{target}} attacked, but {{enemy}} blocked all damage.",
+      "castSpecialDefence": "{{target}} activated a special defense."
+    },
+    "targets": {
+      "yourDragon": "you",
+      "opponentDragon": "opponent",
+      "attackerDragon": "attacker",
+      "defenderDragon": "defender"
+    },
+    "meters": "{{distance}} meter(s)",
+    "rage": "rage",
+    "skipBattleProcess": "Skip battle process",
+    "watchTheBattle": "Watch the battle",
+    "fullScreen": "Open in full screen",
+    "exitFullScreen": "Exit from full screen"
+  },
+  "footer": {
+    "links": {
+      "gitHub": "GitHub",
+      "faq": "FAQ",
+      "whitepaper": "Whitepaper",
+      "support": "Support",
+      "telegram": "Telegram",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "discord": "Discord Community",
+      "telegramGlobalCommunity": "Telegram Global Community",
+      "medium": "Medium"
+    }
+  },
+  "leaderboard": {
+    "title": "Leaderboard", // A leaderboard showing a ranking of the 10 coolest dragons in Dragonereum
+    "pageTitle": "Dragonereum leaders",
+    "pageSubtitle": "The ten coolest dragons in Dragonereum",
+    "coolness": "Coolness", // Header of column showing the coolness of a dragon on the leaderboard tab
+    "reward": "Reward", // Shows the reward amount that dragons can receive, next to the coolness on the leaderboard tab
+    "distributeRewards": "Distribute rewards",
+    "distributeRewardsSuccess": "Rewards were distributed successfully",
+    "distributeRewardsError": "Distribution error"
+  },
+  "filters": { // Different options for arranging dragons sold on the Marketplace tab  or  a player’s dragons or eggs in order depending on the selected filter under the My dragons tab
+    "newestFirst": "Newest first",
+    "newestLast": "Newest last",
+    "coolestFirst": "Coolest first",
+    "coolestLast": "Coolest last",
+    "expensiveFirst": "Most expensive first",
+    "expensiveLast": "Most expensive last",
+    "generationFirst": "Latest generation first",
+    "generationLast": "Latest generation last",
+    "resetFilters": "Reset filters",
+    "noFilterResult": "Oops! No results",
+    "searchNotMatchDragons": "Your search did not find any dragons",
+    "searchNotMatchEggs": "Your search did not find any eggs"
+  },
+  "profile": {
+    "title": "Profile",
+    "yourNickname": "Your username", // Title next to player’s address or a name (if it is set up). This menu appears when a user clicks on the little person in a circle icon on the top right of the screen or on the GOLD coin icon to the left
+    "copyAddress": "Copy address",
+    "noOfferAsk": "You have no active Ask offer, start trading now", // Shows if there are no GOLD offers set
+    "noOfferBid": "You have no active Bid offer, start trading now", // Shows if there are no GOLD offers set
+    "availableGold": "Available GOLD", // The amount of GOLD in the player’s account
+    "setNickname": "Set your username", // Title on pop-up that appears after clicking on the write icon next to the player’s ethereum wallet address
+    "nickname": "Username", // Title of field where player should enter the new nickname
+    "saveName": "Save name", // Name of button to save the nickname
+    "setUserNameSuccess": "You successfully updated your name", // Message after nickname has been updated
+    "setUserNameError": "Error setting your name", // Message showing if nickname is not allowed
+    "userExists": "A user with that name already exists",
+    "filtersEnabled": "Enable filters",
+    "computerPower": "Computer performance", // Not used now
+    "computerPowerTooltip": "This parameter affects the quality of animations and dragon movements", // Not used now
+    "computerPowerDescription": "Your computer performance is enough to render simple dragon animations and movements.", // Not used now
+    "addGoldToWallet": "Add GOLD to your wallet",
+    "activeOfferAsk": "Active gold offer (Ask)",
+    "activeOfferBid": "Active gold offer (Bid)",
+    "useDragonereumNode": "Use Dragonereum Node"
+  },
+  "storybook": {
+    "title": "Storybook",
+    "uncleHowNotes": "Uncle How Notes",
+    "noteIsMissing": "Note is missing",
+    "stars": "* * *",
+    "messageForFollowers": {
+      "title": "A message to My Followers",
+      "myBlog": "My blog is a guide for newcomers.",
+      "fewWeeksAgo": "A few weeks ago I stumbled upon Dragonereum, an amazing world of digital dragons. The longer I studied it, the more I came to realize that it wasn't just another crypto-project. It's something more. I've been keeping a record of my impressions in order to publish a short overview later on. But I realize now that my blog could become a guide for people who just got their first unusual token. People who dare, just as I once did, to set out on the path of the Dragon Master...",
+      "encrypted": "*part of the text is encrypted*",
+      "noOneKnows": "Just as I thought, no one else knows about Dragonereum. It's time to take responsibility and let the world know the truth about this amazing world. I'm going to send random users a number of eggs from Genesis so they can become Dragon Masters just like me. Dragonereum can only benefit from this. The more users there are, the more Ether and the more opportunity for growth there will be.",
+      "needToDoIt": "I just need to do it before time runs out. Today's the day, you see.",
+      "away": "They’re coming to take me away today.",
+      "from": "From:",
+      "email": "drg-bet-xxxl@onion",
+      "subj": "SUBJ:",
+      "earnMoreGold": "Do you want to earn more cyber-gold from battles? Come to the Underground and choose your own reward! Or place a bet and hit the jackpot without even going into battle!",
+      "skillsDeserves": "Do you think your skills in the Arena deserves more of a reward? Do you want to earn more cyber-gold? Welcome to the Underground! Unlike the Arena, in the Underground the Masters themselves set the size of the prize. You can also bet on dragon battles. But keep it under your hat, okay? You don't want the others to get jealous of your vast wealth.",
+      "joinThePot": "Join the battle for the pot...",
+      "deserveMore": "If you think you deserve more for winning, the Underground is right up your alley! Here you can see a list of scheduled battles, as well as the pot for each battle. Choose a suitable opponent for your dragon.",
+      "otherMasters": "Don't forget that the other Masters want to have some fun too, so you need to give them time to place their bets. And the winner doesn't just take home the pot - they also get a share of all bets placed against their dragon. It's a nice, profitable little business. By the way, anyone can apply, but there's no certainty that the battle planner will choose you. But if there's nothing for your dragon to do, you can plan your own battle!",
+      "chooseADragon": " It's easy! Just choose a dragon, set the size of the pot, and set a time frame for receiving applications. Ready? Come on and bring your fighter over here! What did you think? The public wants a good show! And your dragon will stay with us until he's worked off the battle. Running around the Arena comes later. If he wins, of course.",
+      "chooseAnOpponent": "And don't forget to choose an opponent. If you don't choose one yourself, we'll send some random thug of a dragon into battle against yours. But you can always cut a deal - just pay a small amount to extend the time until the battle begins. Your chances of finding a good opponent will improve. But don't make the crowd wait too long, okay? You need to leave time for betting too. When the time runs out, either you or your opponent can start the battle. The rules of combat are just the same as they are in the Arena. The winner will end up a lot richer, the loser a lot poorer. But, as they say, nothing ventured, nothing gained!",
+      "skipOut": "If you still skip out on the battle you can expect to meet an angry crowd of people who have placed big bets. If you want to keep your honor (and your life), you'd be wise to pay them compensation. The law is harsh, but hey, this is the Underground.",
+      "placeABet": "...or just place a bet!",
+      "dontHaveADragon": "Don't have a dragon? Worried your dragon might not be tough enough? No problem! In the Underground, you can make some money even without a dragon. How, you ask? By betting on battles! Take a look at the list of scheduled battles. If both combatants have already been selected, you can bet on the outcome. Grab your wallet before the battle begins!",
+      "winningsDepend": "Your winnings depend on the bets that have been placed against the winner. Part of the pot goes to the owner of the winning dragon, and the rest is shared between you and any other Masters who predicted the outcome correctly. The more you bet, the more you win. Well? Ready to try your luck?"
+    },
+    "whatIsDragonereum": {
+      "title": "What is Dragonereum?",
+      "dragonereumIs": "Dragonereum is a digital world of dragons. MetaMask required",
+      "thePortalTurned": "The portal turned out to be more than just a catalog of animated GIFs - it's an entire interactive world! But there's nothing here but dragons. It's like some kind of \"Dragonereum\" or something! I have to study it more closely. Maybe I can put together a decent overview of it.",
+      "portalClosed": "When I logged into Dragonereum the second time I was shocked to see that nothing was working. I thought they might have closed the portal. It turned out I'd forgotten to activate my MetaMask. You can't interact with the dragons without one. It makes sense, right? We're talking about crypto-tokens, after all. I'll just bookmark a link to the",
+      "metamask": "MetaMask."
+    },
+    "cryptoWallet": {
+      "title": "Your crypto-wallet or your life!",
+      "activateCryptoWallet": "Don't forget to activate your crypto-wallet, Dragon Master. You can't start training your dragons until you do.",
+      "downloadMetamask": "Is this your first time in the crypto-world? Take Uncle Ho's advice and download your",
+      "metamask": "MetaMask."
+    },
+    "lifeGivingEther": {
+      "title": "Life-Giving Ether",
+      "youNeedEther": "You need Ether to train your dragons.",
+      "itTookMeALongTime": "It took me a long time to figure out how to start interacting with the dragons. I kept banging my head against the wall until one day I happened to open my crypto-wallet. The Ether didn't just get the dragons to respond - they started obeying other commands too. Do they eat it or something? Regardless, I can control the dragons now! Just like a real Dragon Master. Sounds pretty cool, huh?",
+      "etherApparently": "Ether is apparently a valuable resource, and the dragons use it to build up their world. The more Ether the dragons get, the more varied their landscape becomes - new areas open up, the topography becomes more complex, and more rivers and forests appear. It's no wonder they want Ether from me for even the simplest commands. Yeah, being a Dragon Master is an expensive hobby. But I'm sure it's worth it."
+    },
+    "genesisBeginning": {
+      "title": "Genesis: the Beginning",
+      "inGenesis": "In Genesis, you can get a dragon egg for free. If you can pull it off, that is. But you'll still need some Ether.",
+      "todayILearned": "Today I learned where new dragons come from. There's an extinct volcano in the center of Dragonereum, and dragon eggs are kept in the ashes. I've counted five types of eggs: Earth, Air, Fire, Water, and Magic - one for each breed of dragon. I wonder if it would be possible to take a dragon egg and raise your very own dragon...",
+      "stoppingYouFromTakingEgg": "There doesn't seem to be anything stopping you from just taking an egg. All you have to do is spend a little ether. However, they're packed very tightly together, and if you reach for one of the eggs in the back there's a chance you might crush the eggs that are closer to you. So I guess you have to take them in a very specific order. I wonder what would happen if more than one user tried to pick up the same egg... Would it go to whoever offered the most Ether for it? That would make sense. I mean, to the extent that rules for distributing dragon eggs could ever make sense...",
+      "judging": "P.S. Judging by the counter, the number of dragon eggs available in Genesis seems to be limited. I wonder where new dragons will come from if they run out of eggs..."
+    },
+    "fromEggToDragon": {
+      "title": "From Egg to Dragon",
+      "ifYouWant": "If you want your egg to hatch into a dragon, you'll need 1,000 gold and a little Ether.",
+      "haveDragonEgg": "Great, now I have a dragon egg. But unless I want to stay an Egg Master forever I need it to hatch into a dragon. I'm guessing that this is going to take some Ether, but I don't seem to have enough. Something's wrong here...",
+      "cyberGold": "Aha! Besides Ether, I also need some cyber-gold. It's a different kind of token, and it seems to be used as currency around here. So a thousand cyber-gold, a little bit of Ether, and now my very own dragon is about to be born. Let's give it a try..."
+    },
+    "struggleLife": {
+      "title": "All Life is Struggle",
+      "dragonsFight": "Dragons fight in the Arena",
+      "likeMyDragon": "I really like my dragon - he's so playful and curious. I'll call him Astor. He definitely has one thing in common with his fellow dragons: ever since he was born, the only thing he's responded to has been Ether. I even had to spend Ether to name him. He's so proud!",
+      "astorProud": "Astor isn't just proud, he's aggressive too. He's always getting into fights with other dragons. But the dragons always love a good battle. They've even cleared a special Arena. And the losing dragon always gets a chance to catch its breath and heal up. Could it be a kind of play, a way for them to hone skills of some sort? I need to observe their battles closely."
+    },
+    "hearthOfBattle": {
+      "title": "In the Hearth of the Battle",
+      "twoIndicators": "The dragons have two indicators, Health and Mana, and five skills: Attack, Defense, Endurance, Speed, and Intelligence. They all affect the outcome of a battle. Battles proceed automatically based on the Strategy you select:",
+      "endurance": "Endurance or Health",
+      "dividedTheDragons": "So I've divided the dragons' fighting abilities into five basic skills: Attack, Defense, Endurance, Speed, and Intelligence. And I've also noticed two key indicators: Health and Mana. They all have a direct influence on what a dragon can do. For example, a dragon with higher Endurance will have more Health. The other skills help to decide a dragon's success in battle.",
+      "courseOfTheBattle": "The Course of the Battle",
+      "overTheCourse": "Over the course of a battle dragons don't just need to be good at Attacking and Defending; they also need to be able to occupy a strong position. The main factor here is, of course, Speed. A quick fighter can land several blows before his opponent catches up. He also strikes first. Combat is extremely intense and lasts until one of the fighters runs out of Health.",
+      "specialMoves": "Special Moves, Mana, and Intelligence",
+      "airDragon": "I saw an Air Dragon hit an enemy with a Lightning Strike; and in another battle I saw a Fire Dragon hide behind a Wall of Fire. These are what I call Special Moves. They're much more powerful than ordinary Attack and Defense, and they're different for each breed of dragon. But the dragons don't use their Special Moves all the time because they require too much energy. I call this energy \"Mana.\"",
+      "dragonsMana": "A dragon's Mana is based on its Intelligence, which determines its maximum Mana as well as the speed at which it gets replenished. Here's a surprising fact: dragons with higher Intelligence are more likely to use Special Moves rather than ordinary Attack and Defense. I think there's more to this than just how much Mana they have.",
+      "combatStrategies": "Combat Strategies",
+      "astor": "When Astor goes into the Arena, I don't even have to give him any commands. I can just watch the battle unfold. The dragon attacks and defends independently based on the Strategy I've selected for him.",
+      "dragonsCombat": "A dragon's Combat Strategy is defined by two tactics. First of all, should my dragon do more attacking or defending? And second, should he prioritize ranged or melee attacks? I'm trying to determine Astor's definitive battle strategy while balancing these different questions.",
+      "meleeAttacks": "It isn't easy. On the one hand, dragons do more damage with melee attacks. But attacking from close up gives the enemy a chance to counterattack. This can happen if the enemy's Defense is higher than my dragon's Attack. In ranged combat the enemy can't counterattack, but Astor doesn't deal as much damage. So proper preparation means studying your opponent carefully.",
+      "managedDragons": "And I think that's all I've managed to learn about the dragons' skills and how they use them in combat. Now that I've studied their fighting traditions in detail, I can send Astor into battle and expect him to win every time. Now where's that Arena..."
+    },
+    "firstArena": {
+      "title": "First Time in the Arena",
+      "inTheArena": "In the Arena, you can attack, but you've got to defend yourself too. The most important thing is to choose the right Strategy.",
+      "okay": "Okay, I found the Arena! To start the battle, I need to select Astor (he's the one I want to send into combat) and an opponent. Go get 'em, Astor!",
+      "staringAtHim": "No, you're just staring at him! What a stubborn dragon! He won't fight until he gets his Ether. The greedy little sneak! How did he get into all those fights before? Hold on! It looks like some big bruiser is already picking a fight with Astor...",
+      "attackedAlready": "My dragon's attacked been already! I couldn't even give Astor a suitable Attack Strategy - you can't do it unless you attack first. The defending dragon uses the Defense Strategy it was given beforehand. Dragons may be proud creatures, but they're also obedient. Let's hope my strategy for Astor works out. Now all I can do is wait and see how the battle goes. Come on, Astor!"
+    },
+    "failedDefence": {
+      "title": "Failed Defence",
+      "definedAndLost": "If he defended and lost, there's time for him to get his strength back.",
+      "ouch": "Ouch! This time the other dragon was stronger. Astor lost the battle. But now I have time to prepare for the next one. I've noticed that my dragon never gets attacked more than once a day.",
+      "butICanDoSomeAttacking": "But I can do some attacking of my own. Astor may have been beaten, but his spirit hasn't been broken! But first I'd better give him a chance to lick his wounds and get his strength back. Wounded dragons make pretty lousy fighters."
+    },
+    "failedAttack": {
+      "title": "Failed Attack",
+      "attackedAndLost": "If he attacked and lost, he'll need to get his strength back.",
+      "whoa": "Whoa, things didn't go my dragon's way this time. Astor lost the battle. Don't give up, little buddy! We'll have another chance to win. For now you should just lick your wounds and get your strength back. Rest for a while. I'm sure you'll show them what you're made of in the Arena!"
+    },
+    "trainDragon": {
+      "title": "How to Train Your Dragon",
+      "everyVictory": "Every victory earns you Experience Points",
+      "amazing": "Amazing! You wiped the floor with 'em! All that time I spent getting ready and studying dragon behavior really paid off! Astor knocked the enemy's flat on his back in minutes. One surprising thing is that my dragon earned something called \"Experience Points\" for winning. I wonder what they're for.",
+      "iGetItNow": "Oh, I think I get it now. Dragons earn Experience Points when they win battles. As they earn experience, they get closer to leveling up and learning new abilities. The stronger the enemy they defeat, the more experience they earn. The losing dragon probably doesn't get anything. I hope Astor reaches level 2 soon - I can't wait to see what else these amazing creatures can do!",
+      "byTheWay": "By the way, the winner gets less experience if he's defending. But the attacking dragon doesn't just earn experience - he also earns cyber-gold for his master! And, as I pointed out earlier, you can't get an egg to hatch into a dragon without cyber-gold."
+    },
+    "dna": {
+      "title": "DNA: from Skills to Offspring`s",
+      "whenDragonReaches": "When your dragon reaches a new level, you get DNA Points. You can use them to improve your dragon's skills or obtain offspring. To obtain offspring, you need two dragons. If they're of different breeds, the baby will be a mixed-breed dragon.",
+      "yesAtLast": "Yes! At last! My dragon won another battle and leveled up! Wow, he got 10 DNA Points! He'll probably get more DNA Points every time he goes up a level. Now let's find out what we can use them for.",
+      "dnaPoints": "Okay, DNA Points can be spent in two ways: to improve the dragon's skills, or to obtain offspring. The number of DNA Points you get increases with each new level, but the upgrades cost more, too. Judging by the other dragons, the highest level Astor can reach would be level 10.",
+      "iThoughtThat": "I thought that all of his skills would be improved at once, but apparently there's more to it than that. Each part of a dragon's body - head, torso, and paws - makes its own contribution to the dragon's overall skill level. And each body part affect its own set of indicators. You can use DNA Points to upgrade your dragon's paws, which will increase the level of the corresponding skills. Okay, Astor, let's take a look at your anatomy...",
+      "completelyForgot": "Oh, I completely forgot about the second option. You can also use DNA Points to get your dragon to produce offspring. Dragons are basically asexual - any two individuals can produce a new dragon egg. I seem to have discovered the answer to the question of how new dragons will keep appearing even once the ancestral eggs in the Genesis volcano have all been used up...",
+      "holdOnASecond": "Hold on a second - in Genesis, a Fire Egg hatches into a Fire Dragon. So what kind of egg will we get if we match two dragons of different breeds? I guess the baby will probably have body parts from both parents. And its offspring will be even more varied. I really can't wait to try it! But that means I'm going to have to train a second dragon. Shoot, how am I supposed to do that? There are obviously no other users here, and there's no Marketplace to exchange eggs and dragons either. You know, for Ether or cyber-gold.",
+      "gotIt": "I've got it! I need to attract some other users. But I need to get the Marketplace ready first."
+    },
+    "dragonomics": {
+      "title": "Dragonomics",
+      "buyAndSell": "Users can buy and sell eggs and dragons at the Marketplace.",
+      "okay": "Okay, I've created a Marketplace where people can buy eggs and dragons from other users and put their own eggs and dragons up for sale. Unlike the purebred dragons in Genesis, most of the eggs and dragons at the Marketplace will have been bred by users. This opens up so many possibilities! First of all, once there are no more Genesis eggs left we'll be able to buy new ones at the Marketplace. Second, you won't necessarily need to train two dragons if you want to get a baby dragon - you'll be able to buy what you need from other Masters.",
+      "spendEther": "You'll have to spend a little Ether on top of the price of your purchases, of course - the dragons are also involved in the deal, and they won't acknowledge their new owners without their favorite treat. "
+    },
+    "goldFever": {
+      "title": "Gold Fever",
+      "needMore": "Need more cyber-gold? Buy some from other Masters!",
+      "occured": "It's occurred to me that someone could have a run of bad luck in battle, so there needs to be another way to get cyber-gold. Something like an exchange, where the more successful Dragon Masters can trade their surplus dragons. But what resource could interest a successful Dragon Master more than cyber-gold? There's only one answer: Ether!",
+      "dontHaveAnyEther": "But if you don't have any Ether, the only way to get more is by fighting in the Arena. You'll have to win in order to get your cyber-gold. Although..."
+    },
+    "dragonBreeding": {
+      "title": "Dragon-Breeding: Art of Science?",
+      "offspring": "The offspring of two dragons will combine the strengths of both parents, but it's better if the parents aren't related to each other. If you need some fresh blood, you can check the Marketplace for a suitable mate.",
+      "breedingDragons": "Breeding dragons is a special skill in its own right. Sure, dragons of different breeds will produce a baby that combines the strengths of both breeds. But breeding two close relatives can lead to problems. A baby born to two dragons who are offspring of the same parent may have birth defects, which will have a negative impact on its skills. And, however successful you are at training your dragons, you're still going to need fresh blood for breeding. That's why I'm so eager for new Masters to come to Dragonereum. Then we'll be able to combine our efforts. I assume we'll be able to make arrangements at the Marketplace.",
+      "withTrading": "As with trading, Masters will be able to offer their dragons as breeding stock in return for cyber-gold or Ether. Once the deal is done, the purchaser will get a new dragon egg and the seller will receive the price they had set. After all, it won't be possible to spend DNA Points to upgrade your dragons' skills or breed them any longer.",
+      "turnsOut": "As it turns out, picking the right breeding pair is a real art, and there are no firm rules. A strong dragon will have strong offspring, and a fast dragon will have fast offspring. So if I need a strong, fast dragon, I know what to do. The most important thing is to keep a close eye on the dragons' pedigree."
+    }
+  }
+}
