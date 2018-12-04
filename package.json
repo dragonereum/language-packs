@@ -1,0 +1,28 @@
+{
+  "name": "drgonereum-language-packs",
+  "description": "Dragonereum language packs for UI.",
+  "version": "1.0.0",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dragonereum/language-packs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dragonereum/language-packs/issues"
+  },
+  "devDependencies": {
+    "husky": "^1.2.0",
+    "json5": "^2.1.0",
+    "lint-staged": "^8.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "locales/**/*.json5": [
+      "json5 -v"
+    ]
+  }
+}
