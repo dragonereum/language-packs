@@ -24,7 +24,7 @@
       "enableFilters": "Being cypherpunks, Dragon Masters prefer to receive information in a decentralized way. But you can always get dragon population figures by connecting to the Dragonereum server.",
       "useDragonereumNode": "Use our portal to Blockchain instead of INFURA. Don't  touch it if you don't know what it is.",
       "battleCounter": "The time remaining before the start of the battle. Note that time in Dragonereum is measured in blocks rather than hours.",
-      "distributeRewards": "Once a day any Dragon Master can distribute the reward among the top-rated dragons. Needless to say, you always want one of your own dragons to be on the list."
+      "distributeRewards": "Once a day any Dragon Master can distribute the reward among the top-rated dragons. Needless to say, you always want one of your own dragons to be on the list. Keep in mind that in case of the Treasury fund depletion or its shortage, payments for being on the Leaderboard may be partially paid or halted (temporarily)."
     },
     "races": { // The different types of eggs that a player can buy under the Genesis Tab
       "magic": {
@@ -87,7 +87,6 @@
     "myBid": "My Bid",
     "newContentIsAvailable": "New content is available. Click here to refresh.",
     "contentIsCached": "Content is cached for offline use.",
-    "limitedConnection": "We couldn't recognize your wallet. Please unlock it or click here to download the MetaMask extension.",
     "renderingError": "Rendering error. Default images were used.",
     "metaMaskIsOutdated": "It seems like your MetaMask version does not support adding the tokens. Please update your MetaMask to the latest version.",
     "saveChanges": "Save changes",
@@ -95,7 +94,9 @@
     "transactionInProgress": "Processing transaction with {{tx}} hash. Click here to view the transaction on Etherscan.", // when acquiring an egg for example or hatching the egg, or any other process that requires time a pop-up appears until the transaction is complete
     "transactionInProgressCyb": "Processing transaction with {{tx}} hash. Click here to view the transaction.",
     "transactionIsMined": "Transaction with {{tx}} hash mined. Click here to view the transaction on Etherscan.",
+    "transactionIsMinedCyb": "Transaction with {{tx}} hash mined. Click here to view the transaction.",
     "transactionIsRejected": "Transaction with {{tx}} hash failed. Click here to view the transaction on Etherscan.",
+    "transactionIsRejectedCyb": "Transaction with {{tx}} hash failed. Click here to view the transaction.",
     "goToMarketplace": "Go to marketplace",
     "notifications": "Notifications", // Tab on right side appears, after pressing the bell button on the top right, it shows all the different notifications a player has received, such as errors when buying eggs
     "notificationsEmptyMessageHeader": "You do not have any notifications yet or have reloaded your browser tab recently.",
@@ -126,6 +127,7 @@
       "skillIsSentToMarketplace": "You sent your dragon's #{{id}} skill to the marketplace.",
       "skillIsRemovedFromMarketplace": "Your dragon's #{{id}} skill has been removed from the marketplace.",
       "storybookUnlocked": "{{title}} by {{author}}",
+      "storybookUnlockedWithoutAuthor": "{{title}}",
       "skillsBought": "The dragon #{{id}} used a special skill on your dragon #{{target}}.",
       "skillsSold": "Your dragon #{{id}} used a special skill on the dragon #{{target}}.",
       "battleAttack": "Your dragon #{{id}} attacked the dragon #{{opponent}}. Click here to get the lowdown.",
@@ -377,11 +379,12 @@
     "title": "Genesis", // This tab is where players can buy genesis eggs
     "heading": "Welcome to the Genesis market",
     "description": "There are five inter-breedable types of dragons, each with dominant and recessive genes, genome mutations, and gene penalties for inbreeding. Want to hatch a dragon of your own? Take a chance and claim your egg now!",
+    "descriptionCyb": "Genesis is under attack by third-party bots. If you are encountering any problems with claiming Gen0 eggs {{cyb}} or use our node {{link}} as a custom rpc in your wallet.",
+    "tryCyb": "try Cyb",
     "restAmount": "{{amount}} egg(s) left", // Shows the amount of Genesis eggs of each type that are left to sell
     "lastClaimed": "Last claimed:",
     "claim": "Claim",
     "expectedNext": "Next expected:",
-    "expectedPrice": "Expected price: {{price}}",
     "gasPrice": "Gas price (Gwei)",
     "gasPriceValue": "Gas price (Gwei): {{value}}",
     "eggNumber": "Egg number",
@@ -392,8 +395,7 @@
     "priceChanging": "Price changing:",
     "gwei": "{{value}} Gwei",
     "rising": "{{arrow}} Rising",
-    "falling": "{{arrow}} Falling",
-    "overbid": "Overbid"
+    "falling": "{{arrow}} Falling"
   },
   "marketplace": {
     "title": "Marketplace",
@@ -428,11 +430,18 @@
     "noOneDragonsHatched": "Oops! No dragons seem to have hatched.",
     "noGoldForSale": "Oops! No one is selling GOLD at the moment.", // Under Marketplace tab, the GOLD tab, message shows if no one is selling GOLD
     "createNewOffer": "Create new offer",
+    "showMoreLines": "Show more lines",
+    "tradeHistory": "Trade history",
+    "history": "History",
+    "amount": "Amount",
+    "pricePerCoin": "Price per coin",
+    "date": "Date",
     "available": "Available",
     "ask": "Ask",
     "bid": "Bid",
     "askPerCoin": "ASK (ETH per coin)",
     "bidPerCoin": "BID (ETH per coin)",
+    "totalPrice": "Total price: {{price}}",
     "totalPriceETH": "Total price ETH",
     "sellGold": "Sell GOLD",
     "buyGold": "Buy GOLD",
@@ -720,13 +729,18 @@
     "setUserNameError": "Error setting your name", // Message showing if nickname is not allowed
     "userExists": "A user with that name already exists",
     "filtersEnabled": "Enable filters",
-    "computerPower": "Computer performance", // Not used now
-    "computerPowerTooltip": "This parameter affects the quality of animations and dragon movements", // Not used now
-    "computerPowerDescription": "Your computer performance is enough to render simple dragon animations and movements.", // Not used now
+    "computerPower": "Computer performance",
+    "computerPowerTooltip": "This parameter affects the quality of animations and dragon movements",
+    "computerPowerDescription": "Your computer performance is enough to render simple dragon animations and movements.",
+    "computerPowerLow": "Low",
+    "computerPowerMedium": "Medium",
+    "computerPowerHigh": "High",
     "addGoldToWallet": "Add GOLD to your wallet",
     "activeOfferAsk": "Active gold offer (Ask)",
     "activeOfferBid": "Active gold offer (Bid)",
-    "useDragonereumNode": "Use Dragonereum Node"
+    "useDragonereumNode": "Use Dragonereum Node",
+    "clearCache": "Clear cache",
+    "showDragonAnimation": "Show animation in a dragon profile"
   },
   "storybook": {
     "title": "Storybook",
