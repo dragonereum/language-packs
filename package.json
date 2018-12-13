@@ -1,11 +1,11 @@
 {
-  "name": "drgonereum-language-packs",
+  "name": "@dragonereum/language-packs",
   "description": "Dragonereum language packs for UI.",
   "version": "1.0.0",
   "license": "WTFPL",
   "repository": {
     "type": "git",
-    "url": "git@github.com:dragonereum/language-packs.git"
+    "url": "git+https://github.com/dragonereum/language-packs.git"
   },
   "bugs": {
     "url": "https://github.com/dragonereum/language-packs/issues"
