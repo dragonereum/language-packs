@@ -15,6 +15,9 @@
     "json5": "^2.1.0",
     "lint-staged": "^8.1.0"
   },
+  "scripts": {
+    "build:en": "json5 -s 2 -o dist/en.json locales/en.json5"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

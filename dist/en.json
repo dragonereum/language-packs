@@ -22,7 +22,6 @@
       "specialAttack": "An enhanced attack that the dragon can use in combat instead of a normal attack. The higher a dragon's Intelligence, the more often it can use its special attack.",
       "specialDefense": "An enhanced defense that the dragon can use in combat instead of a normal defense. The higher a dragon's Intelligence, the more often it can use its special defense.",
       "enableFilters": "Being cypherpunks, Dragon Masters prefer to receive information in a decentralized way. But you can always get dragon population figures by connecting to the Dragonereum server.",
-      "useDragonereumNode": "Use our portal to Blockchain instead of INFURA. Don't  touch it if you don't know what it is.",
       "battleCounter": "The time remaining before the start of the battle. Note that time in Dragonereum is measured in blocks rather than hours.",
       "distributeRewards": "Once a day any Dragon Master can distribute the reward among the top-rated dragons. Needless to say, you always want one of your own dragons to be on the list. Keep in mind that in case of the Treasury fund depletion or its shortage, payments for being on the Leaderboard may be partially paid or halted (temporarily)."
     },
@@ -151,7 +150,7 @@
     "yourProfile": "Your profile",
     "achievements": "Achievements",
     "willDecrease": "will decrease",
-    "metaMaskIsLocked": "Your MetaMask is locked.",
+    "walletIsLocked": "Your wallet is locked.",
     "transfer": "Transfer",
     "egg": {
       "sellEgg": "Sell ​​egg",
@@ -735,10 +734,10 @@
     "computerPowerLow": "Low",
     "computerPowerMedium": "Medium",
     "computerPowerHigh": "High",
+    "showBattleMovie": "Show battle movie",
     "addGoldToWallet": "Add GOLD to your wallet",
     "activeOfferAsk": "Active gold offer (Ask)",
     "activeOfferBid": "Active gold offer (Bid)",
-    "useDragonereumNode": "Use Dragonereum Node",
     "clearCache": "Clear cache",
     "showDragonAnimation": "Show animation in a dragon profile"
   },
@@ -758,8 +757,8 @@
       "from": "From:",
       "email": "drg-bet-xxxl@onion",
       "subj": "SUBJ:",
-      "earnMoreGold": "Do you want to earn more cyber-gold from battles? Come to the Underground and choose your own reward! Or place a bet and hit the jackpot without even going into battle!",
-      "skillsDeserves": "Do you think your skills in the Arena deserves more of a reward? Do you want to earn more cyber-gold? Welcome to the Underground! Unlike the Arena, in the Underground the Masters themselves set the size of the prize. You can also bet on dragon battles. But keep it under your hat, okay? You don't want the others to get jealous of your vast wealth.",
+      "earnMoreGold": "Do you want to earn more gold from battles? Come to the Underground and choose your own reward! Or place a bet and hit the jackpot without even going into battle!",
+      "skillsDeserves": "Do you think your skills in the Arena deserves more of a reward? Do you want to earn more gold? Welcome to the Underground! Unlike the Arena, in the Underground the Masters themselves set the size of the prize. You can also bet on dragon battles. But keep it under your hat, okay? You don't want the others to get jealous of your vast wealth.",
       "joinThePot": "Join the battle for the pot...",
       "deserveMore": "If you think you deserve more for winning, the Underground is right up your alley! Here you can see a list of scheduled battles, as well as the pot for each battle. Choose a suitable opponent for your dragon.",
       "otherMasters": "Don't forget that the other Masters want to have some fun too, so you need to give them time to place their bets. And the winner doesn't just take home the pot - they also get a share of all bets placed against their dragon. It's a nice, profitable little business. By the way, anyone can apply, but there's no certainty that the battle planner will choose you. But if there's nothing for your dragon to do, you can plan your own battle!",
@@ -800,7 +799,7 @@
       "title": "From Egg to Dragon",
       "ifYouWant": "If you want your egg to hatch into a dragon, you'll need 1,000 gold and a little Ether.",
       "haveDragonEgg": "Great, now I have a dragon egg. But unless I want to stay an Egg Master forever I need it to hatch into a dragon. I'm guessing that this is going to take some Ether, but I don't seem to have enough. Something's wrong here...",
-      "cyberGold": "Aha! Besides Ether, I also need some cyber-gold. It's a different kind of token, and it seems to be used as currency around here. So a thousand cyber-gold, a little bit of Ether, and now my very own dragon is about to be born. Let's give it a try..."
+      "gold": "Aha! Besides Ether, I also need some gold. It's a different kind of token, and it seems to be used as currency around here. So a thousand gold, a little bit of Ether, and now my very own dragon is about to be born. Let's give it a try..."
     },
     "struggleLife": {
       "title": "All Life is Struggle",
@@ -847,7 +846,7 @@
       "everyVictory": "Every victory earns you Experience Points",
       "amazing": "Amazing! You wiped the floor with 'em! All that time I spent getting ready and studying dragon behavior really paid off! Astor knocked the enemy's flat on his back in minutes. One surprising thing is that my dragon earned something called \"Experience Points\" for winning. I wonder what they're for.",
       "iGetItNow": "Oh, I think I get it now. Dragons earn Experience Points when they win battles. As they earn experience, they get closer to leveling up and learning new abilities. The stronger the enemy they defeat, the more experience they earn. The losing dragon probably doesn't get anything. I hope Astor reaches level 2 soon - I can't wait to see what else these amazing creatures can do!",
-      "byTheWay": "By the way, the winner gets less experience if he's defending. But the attacking dragon doesn't just earn experience - he also earns cyber-gold for his master! And, as I pointed out earlier, you can't get an egg to hatch into a dragon without cyber-gold."
+      "byTheWay": "By the way, the winner gets less experience if he's defending. But the attacking dragon doesn't just earn experience - he also earns gold for his master! And, as I pointed out earlier, you can't get an egg to hatch into a dragon without gold."
     },
     "dna": {
       "title": "DNA: from Skills to Offspring`s",
@@ -856,7 +855,7 @@
       "dnaPoints": "Okay, DNA Points can be spent in two ways: to improve the dragon's skills, or to obtain offspring. The number of DNA Points you get increases with each new level, but the upgrades cost more, too. Judging by the other dragons, the highest level Astor can reach would be level 10.",
       "iThoughtThat": "I thought that all of his skills would be improved at once, but apparently there's more to it than that. Each part of a dragon's body - head, torso, and paws - makes its own contribution to the dragon's overall skill level. And each body part affect its own set of indicators. You can use DNA Points to upgrade your dragon's paws, which will increase the level of the corresponding skills. Okay, Astor, let's take a look at your anatomy...",
       "completelyForgot": "Oh, I completely forgot about the second option. You can also use DNA Points to get your dragon to produce offspring. Dragons are basically asexual - any two individuals can produce a new dragon egg. I seem to have discovered the answer to the question of how new dragons will keep appearing even once the ancestral eggs in the Genesis volcano have all been used up...",
-      "holdOnASecond": "Hold on a second - in Genesis, a Fire Egg hatches into a Fire Dragon. So what kind of egg will we get if we match two dragons of different breeds? I guess the baby will probably have body parts from both parents. And its offspring will be even more varied. I really can't wait to try it! But that means I'm going to have to train a second dragon. Shoot, how am I supposed to do that? There are obviously no other users here, and there's no Marketplace to exchange eggs and dragons either. You know, for Ether or cyber-gold.",
+      "holdOnASecond": "Hold on a second - in Genesis, a Fire Egg hatches into a Fire Dragon. So what kind of egg will we get if we match two dragons of different breeds? I guess the baby will probably have body parts from both parents. And its offspring will be even more varied. I really can't wait to try it! But that means I'm going to have to train a second dragon. Shoot, how am I supposed to do that? There are obviously no other users here, and there's no Marketplace to exchange eggs and dragons either. You know, for Ether or gold.",
       "gotIt": "I've got it! I need to attract some other users. But I need to get the Marketplace ready first."
     },
     "dragonomics": {
@@ -867,15 +866,15 @@
     },
     "goldFever": {
       "title": "Gold Fever",
-      "needMore": "Need more cyber-gold? Buy some from other Masters!",
-      "occured": "It's occurred to me that someone could have a run of bad luck in battle, so there needs to be another way to get cyber-gold. Something like an exchange, where the more successful Dragon Masters can trade their surplus dragons. But what resource could interest a successful Dragon Master more than cyber-gold? There's only one answer: Ether!",
-      "dontHaveAnyEther": "But if you don't have any Ether, the only way to get more is by fighting in the Arena. You'll have to win in order to get your cyber-gold. Although..."
+      "needMore": "Need more gold? Buy some from other Masters!",
+      "occured": "It's occurred to me that someone could have a run of bad luck in battle, so there needs to be another way to get gold. Something like an exchange, where the more successful Dragon Masters can trade their surplus dragons. But what resource could interest a successful Dragon Master more than gold? There's only one answer: Ether!",
+      "dontHaveAnyEther": "But if you don't have any Ether, the only way to get more is by fighting in the Arena. You'll have to win in order to get your gold. Although..."
     },
     "dragonBreeding": {
       "title": "Dragon-Breeding: Art of Science?",
       "offspring": "The offspring of two dragons will combine the strengths of both parents, but it's better if the parents aren't related to each other. If you need some fresh blood, you can check the Marketplace for a suitable mate.",
       "breedingDragons": "Breeding dragons is a special skill in its own right. Sure, dragons of different breeds will produce a baby that combines the strengths of both breeds. But breeding two close relatives can lead to problems. A baby born to two dragons who are offspring of the same parent may have birth defects, which will have a negative impact on its skills. And, however successful you are at training your dragons, you're still going to need fresh blood for breeding. That's why I'm so eager for new Masters to come to Dragonereum. Then we'll be able to combine our efforts. I assume we'll be able to make arrangements at the Marketplace.",
-      "withTrading": "As with trading, Masters will be able to offer their dragons as breeding stock in return for cyber-gold or Ether. Once the deal is done, the purchaser will get a new dragon egg and the seller will receive the price they had set. After all, it won't be possible to spend DNA Points to upgrade your dragons' skills or breed them any longer.",
+      "withTrading": "As with trading, Masters will be able to offer their dragons as breeding stock in return for gold or Ether. Once the deal is done, the purchaser will get a new dragon egg and the seller will receive the price they had set. After all, it won't be possible to spend DNA Points to upgrade your dragons' skills or breed them any longer.",
       "turnsOut": "As it turns out, picking the right breeding pair is a real art, and there are no firm rules. A strong dragon will have strong offspring, and a fast dragon will have fast offspring. So if I need a strong, fast dragon, I know what to do. The most important thing is to keep a close eye on the dragons' pedigree."
     }
   }
