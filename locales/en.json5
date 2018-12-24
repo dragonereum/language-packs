@@ -67,6 +67,14 @@
         }
       },
     },
+    "wallets": {
+      "cyb": "Cyb browser",
+      "metaMask": "MetaMask",
+      "bunToy": "BunToy browser",
+      "status": "Status browser",
+      "lumi": "Lumi wallet",
+      "trust": "Trust wallet"
+    },
     "yourDragon": "Your Dragon",
     "eggs": "Eggs",
     "dragons": "Dragons",
@@ -87,7 +95,7 @@
     "newContentIsAvailable": "New content is available. Click here to refresh.",
     "contentIsCached": "Content is cached for offline use.",
     "renderingError": "Rendering error. Default images were used.",
-    "metaMaskIsOutdated": "It seems like your MetaMask version does not support adding the tokens. Please update your MetaMask to the latest version.",
+    "walletIsOutdated": "It seems like your wallet does not support adding the tokens. Please update your wallet to the latest version.",
     "saveChanges": "Save changes",
     "save": "Save",
     "transactionInProgress": "Processing transaction with {{tx}} hash. Click here to view the transaction on Etherscan.", // when acquiring an egg for example or hatching the egg, or any other process that requires time a pop-up appears until the transaction is complete
@@ -503,7 +511,7 @@
   },
   "wrongNetwork": {
     "title": "Oops! You're on the wrong network.",
-    "hint": "Just open MetaMask and switch to one of the following networks:"
+    "hint": "Just open your wallet and switch to one of the following networks:"
   },
   "arena": {
     "title": "Arena",
@@ -770,16 +778,14 @@
     },
     "whatIsDragonereum": {
       "title": "What is Dragonereum?",
-      "dragonereumIs": "Dragonereum is a digital world of dragons. MetaMask required",
+      "dragonereumIs": "Dragonereum is a digital world of dragons. Сrypto-wallet required",
       "thePortalTurned": "The portal turned out to be more than just a catalog of animated GIFs - it's an entire interactive world! But there's nothing here but dragons. It's like some kind of \"Dragonereum\" or something! I have to study it more closely. Maybe I can put together a decent overview of it.",
-      "portalClosed": "When I logged into Dragonereum the second time I was shocked to see that nothing was working. I thought they might have closed the portal. It turned out I'd forgotten to activate my MetaMask. You can't interact with the dragons without one. It makes sense, right? We're talking about crypto-tokens, after all. I'll just bookmark a link to the",
-      "metamask": "MetaMask."
+      "portalClosed": "When I logged into Dragonereum the second time I was shocked to see that nothing was working. I thought they might have closed the portal. It turned out I'd forgotten to activate my crypto-wallet. You can't interact with the dragons without one. It makes sense, right? We're talking about crypto-tokens, after all.",
     },
     "cryptoWallet": {
       "title": "Your crypto-wallet or your life!",
       "activateCryptoWallet": "Don't forget to activate your crypto-wallet, Dragon Master. You can't start training your dragons until you do.",
-      "downloadMetamask": "Is this your first time in the crypto-world? Take Uncle Ho's advice and download your",
-      "metamask": "MetaMask."
+      "downloadWallet": "Is this your first time in the crypto-world? Take Uncle Ho's advice and download your {{wallet}}.",
     },
     "lifeGivingEther": {
       "title": "Life-Giving Ether",
