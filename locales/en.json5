@@ -21,7 +21,7 @@
       "talent": "Lets a dragon heal another dragon, replenish its mana, or enhance one of its skills until the next battle. A Talent can only be selected once, when the dragon reaches level 10.",
       "specialAttack": "An enhanced attack that the dragon can use in combat instead of a normal attack. The higher a dragon's Intelligence, the more often it can use its special attack.",
       "specialDefense": "An enhanced defense that the dragon can use in combat instead of a normal defense. The higher a dragon's Intelligence, the more often it can use its special defense.",
-      "enableFilters": "Being cypherpunks, Dragon Masters prefer to receive information in a decentralized way. But you can always get dragon population figures by connecting to the Dragonereum server.",
+      "enableServer": "Being cypherpunks, Dragon Masters prefer to receive information in a decentralized way. But you can always get dragon population figures by connecting to the Dragonereum server.",
       "battleCounter": "The time remaining before the start of the battle. Note that time in Dragonereum is measured in blocks rather than hours.",
       "distributeRewards": "Once a day any Dragon Master can distribute the reward among the top-rated dragons. Needless to say, you always want one of your own dragons to be on the list. Keep in mind that in case of the Treasury fund depletion or its shortage, payments for being on the Leaderboard may be partially paid or halted (temporarily)."
     },
@@ -265,7 +265,9 @@
         "removeFromSale": "Cancel sale",
         "purchaseSupportSkill": "Purchase support skill",
         "chooseDragon": "Choose a dragon to apply the support ability to",
-        "selectDragon": "Select dragon"
+        "selectDragon": "Select dragon",
+        "cooldown": "Cooldown",
+        "timeLeft": "{{time}} left"
       },
       "battles": {
         "battleHistory": "Battle history",
@@ -470,8 +472,7 @@
     "buySkillSuccess": "You successfully purchased a service.",
     "buySkillError": "Error purchasing service. Click here to try again.",
     "noSkillsForSale": "Oops! There are no services for sale.",
-    "sellerLowMana": "Seller has low mana",
-    "timeLeft": "{{minutes}}m {{seconds}}s left"
+    "sellerLowMana": "Seller has low mana"
   },
   "myDragons": {
     "title": "My dragons",
@@ -734,7 +735,7 @@
     "setUserNameSuccess": "You successfully updated your name", // Message after nickname has been updated
     "setUserNameError": "Error setting your name", // Message showing if nickname is not allowed
     "userExists": "A user with that name already exists",
-    "filtersEnabled": "Enable filters",
+    "useServer": "Use Dragonereum server",
     "computerPower": "Computer performance",
     "computerPowerTooltip": "This parameter affects the quality of animations and dragon movements",
     "computerPowerDescription": "Your computer performance is enough to render simple dragon animations and movements.",
