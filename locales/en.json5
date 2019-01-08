@@ -25,7 +25,7 @@
       "battleCounter": "The time remaining before the start of the battle. Note that time in Dragonereum is measured in blocks rather than hours.",
       "distributeRewards": "Once a day any Dragon Master can distribute the reward among the top-rated dragons. Needless to say, you always want one of your own dragons to be on the list. Keep in mind that in case of the Treasury fund depletion or its shortage, payments for being on the Leaderboard may be partially paid or halted (temporarily)."
     },
-    "races": { // The different types of eggs that a player can buy under the Genesis Tab
+    "races": { // The different types of eggs that a player can buy
       "magic": {
         "name": "Cyber", // One of the five egg types
         "bonus": "intelligence", // The basic skill that this particular dragon type will boost
@@ -168,9 +168,6 @@
       "cancelEggAuctionError": "Error removing your egg from the marketplace. Click here to try again.",
       "incubateFor": "Incubate for {{price}}", // Once an egg is acquired and a player is on the screen with the unhatched egg, button showing the price of incubation in GOLD coins.
       "eggPrice": "Egg price",
-      "raceEggName": "{{name}} dragon egg",
-      "raceBonusTitle": "Dragon type bonus: {{bonus}}",
-      "raceBonusTo": "{{value}} to {{type}}",
       "isInIncubator": "The egg is incubating, and its position in the nest is {{position}} out of {{capacity}}.",
       "isIncubated": "Congratulations, your egg has hatched! Click here to see your new dragon."
     },
@@ -379,32 +376,6 @@
       }
     }
   },
-  "genesis": {
-    "howAuctionWorks": "How the auction works",
-    "howAuctionWorksText": "If more than one person wants to take the same egg from Genesis, the player who offers the highest gas price will receive the egg. You can join the struggle for a new egg in the next block.",
-    "blockNumber": "Block #{{block}}",
-    "blocksLeft": "{{blocks}} block(s) left",
-    "title": "Genesis", // This tab is where players can buy genesis eggs
-    "heading": "Welcome to the Genesis market",
-    "description": "There are five inter-breedable types of dragons, each with dominant and recessive genes, genome mutations, and gene penalties for inbreeding. Want to hatch a dragon of your own? Take a chance and claim your egg now!",
-    "descriptionCyb": "Genesis is under attack by third-party bots. If you are encountering any problems with claiming Gen0 eggs {{cyb}} or use our node {{link}} as a custom rpc in your wallet.",
-    "tryCyb": "try Cyb",
-    "restAmount": "{{amount}} egg(s) left", // Shows the amount of Genesis eggs of each type that are left to sell
-    "lastClaimed": "Last claimed:",
-    "claim": "Claim",
-    "expectedNext": "Next expected:",
-    "gasPrice": "Gas price (Gwei)",
-    "gasPriceValue": "Gas price (Gwei): {{value}}",
-    "eggNumber": "Egg number",
-    "eggNumberValue": "Egg number: {{value}}",
-    "distributionInfo": "Egg distribution info",
-    "medianPrice": "Median price:",
-    "maxPrice": "Max. price:",
-    "priceChanging": "Price changing:",
-    "gwei": "{{value}} Gwei",
-    "rising": "{{arrow}} Rising",
-    "falling": "{{arrow}} Falling"
-  },
   "marketplace": {
     "title": "Marketplace",
     "breeding": "DNA",
@@ -414,8 +385,6 @@
     "midPrice": "Mid-Market Price",
     "buyEggSuccess": "Your purchase was successful. Click here to see your new egg.",
     "buyEggError": "Error buying egg. Click here to try again.",
-    "claimEggSuccess": "Your claim was successful. Click here to see your new egg.", // Message appears when the transaction of acquiring an egg is complete under the Genesis tab
-    "claimEggError": "Error claiming egg. Try increasing your gas price and claiming an egg again.", // Error message that shows if there is some unforeseen circumstances occurred while claiming an egg - under Genesis tab
     "buyDragonSuccess": "Your purchase was successful. Click here to see your new dragon.",
     "buyDragonError": "Error buying dragon. Click here to try again.",
     "breedDragonSuccess": "You successfully bred the dragons. Click here to see the egg you created.",
@@ -793,13 +762,6 @@
       "youNeedEther": "You need Ether to train your dragons.",
       "itTookMeALongTime": "It took me a long time to figure out how to start interacting with the dragons. I kept banging my head against the wall until one day I happened to open my crypto-wallet. The Ether didn't just get the dragons to respond - they started obeying other commands too. Do they eat it or something? Regardless, I can control the dragons now! Just like a real Dragon Master. Sounds pretty cool, huh?",
       "etherApparently": "Ether is apparently a valuable resource, and the dragons use it to build up their world. The more Ether the dragons get, the more varied their landscape becomes - new areas open up, the topography becomes more complex, and more rivers and forests appear. It's no wonder they want Ether from me for even the simplest commands. Yeah, being a Dragon Master is an expensive hobby. But I'm sure it's worth it."
-    },
-    "genesisBeginning": {
-      "title": "Genesis: the Beginning",
-      "inGenesis": "In Genesis, you can get a dragon egg for free. If you can pull it off, that is. But you'll still need some Ether.",
-      "todayILearned": "Today I learned where new dragons come from. There's an extinct volcano in the center of Dragonereum, and dragon eggs are kept in the ashes. I've counted five types of eggs: Earth, Air, Fire, Water, and Magic - one for each breed of dragon. I wonder if it would be possible to take a dragon egg and raise your very own dragon...",
-      "stoppingYouFromTakingEgg": "There doesn't seem to be anything stopping you from just taking an egg. All you have to do is spend a little ether. However, they're packed very tightly together, and if you reach for one of the eggs in the back there's a chance you might crush the eggs that are closer to you. So I guess you have to take them in a very specific order. I wonder what would happen if more than one user tried to pick up the same egg... Would it go to whoever offered the most Ether for it? That would make sense. I mean, to the extent that rules for distributing dragon eggs could ever make sense...",
-      "judging": "P.S. Judging by the counter, the number of dragon eggs available in Genesis seems to be limited. I wonder where new dragons will come from if they run out of eggs..."
     },
     "fromEggToDragon": {
       "title": "From Egg to Dragon",
