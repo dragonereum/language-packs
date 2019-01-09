@@ -12,6 +12,7 @@
     "processing": "Processing",
     "buyFor": "Buy for {{price}}",
     "currencySwitcherTitle": "Set currency",
+    "cancel": "Cancel",
     "hints": {
       "dragonSkillfulnessIndex": "This is the dragon's genetic rating. The more powerful and rare a dragon's genes are, the higher its rating. The most skilled Dragon Masters get a reward for their contribution to Dragonereum's gene pool.",
       "dnaPoints": "DNA Points can be spent to upgrade a dragon's skills or obtain offspring. Don't forget that the cost of reproduction also goes up as the dragon's level increases.",
@@ -716,7 +717,14 @@
     "activeOfferAsk": "Active gold offer (Ask)",
     "activeOfferBid": "Active gold offer (Bid)",
     "clearCache": "Clear cache",
-    "showDragonAnimation": "Show animation in a dragon profile"
+    "showDragonAnimation": "Show animation in a dragon profile",
+    "addCustomProvider": "Add custom provider",
+    "dataProvider": "Data provider",
+    "addDataProvider": "Add data provider",
+    "customProvider": "New RPC url",
+    "useFastestProvider": "The fastest provider",
+    "useCurrentProvider": "Wallet's default provider",
+    "changeDataProviderError": "Couldn't connect to the provider"
   },
   "storybook": {
     "title": "Storybook",
